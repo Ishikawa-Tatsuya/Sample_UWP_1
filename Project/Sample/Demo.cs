@@ -11,7 +11,7 @@ namespace Sample
     public class Demo
     {
         [TestMethod]
-        public void ChangeContent()
+        public void Test()
         {
             using (var app = new UWPAppFriend(new ByVisualStudio(Path.GetFullPath("../../../TargetApp/TargetApp.sln"))
             {
