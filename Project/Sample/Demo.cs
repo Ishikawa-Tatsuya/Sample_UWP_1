@@ -21,7 +21,9 @@ namespace Sample
                     var dte = dteSrc.Pin<DTE2>();
                     dte.Solution.SolutionBuild.SolutionConfigurations.Item(3).Activate();
                 },
-                ContinueDebuging = true
+                ContinueDebuging = true,
+                InjectionBreakPoint = "App.OnLaunched",
+                Uri = "http://localhost:8085/"
             }))
             {
                 var current = app.Type("Windows.UI.Xaml.Window").Current;
