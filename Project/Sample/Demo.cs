@@ -13,6 +13,8 @@ namespace Sample
         [TestMethod]
         public void Test()
         {
+            //Attach!
+            //Use Visual Studio.
             using (var app = new UWPAppFriend(new ByVisualStudio(Path.GetFullPath("../../../TargetApp/TargetApp.sln"))
             {
                 VisualStudioPath = @"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe",
@@ -26,6 +28,7 @@ namespace Sample
                 Uri = "http://localhost:8085/"
             }))
             {
+                // get mainpage.
                 var current = app.Type("Windows.UI.Xaml.Window").Current;
                 var mainPage = current.Content.Content;
 
